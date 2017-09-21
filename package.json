@@ -1,0 +1,24 @@
+{
+  "name": "image-analysis",
+  "version": "1.0.0",
+  "description": "通过Exif.js来解析图片信息",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuYuee/image-analysis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HuYuee/image-analysis/issues"
+  },
+  "homepage": "https://github.com/HuYuee/image-analysis#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "exif-js": "^2.3.0",
+    "request": "^2.82.0"
+  }
+}

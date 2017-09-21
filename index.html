@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+</head>
+
+<body style="background-color: #eceff1;margin-left: 20px;width: calc(100% - 20px );">
+    <img style="" id="imgElement" src="/src/yyy.jpg" />
+
+
+    <script src="src/exif.js"></script>
+    <script src="https://design.yonyoucloud.com/static/jquery/jquery-1.9.1.min.js"></script>
+
+    <script>
+        (function () {
+            var photoBox = $('#imgElement');
+
+            // photoBox.on('click', function () {
+
+            //     EXIF.getData(this, function () {
+            //         var _dataTxt = EXIF.pretty(this);
+            //         var _dataJson = JSON.stringify(EXIF.getAllTags(this));
+
+            //         console.log(_dataJson);
+            //         console.log(_dataTxt);
+            //     });
+            // });
+
+            EXIF.getData(photoBox[0], function () {
+                var _dataTxt = EXIF.pretty(this);
+                var _dataJson = JSON.stringify(EXIF.getAllTags(this));
+
+                console.log(_dataJson);
+                console.log(_dataTxt);
+            });
+        })();
+    </script>
+</body>
+
+</html>
